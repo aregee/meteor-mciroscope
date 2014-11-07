@@ -1,12 +1,13 @@
 <template name="postItem">
-    <div class="post">
-        <div class="post-content">
-            <h3><a href="{{url}}">{{title}}</a>
-                <span>{{domain}}</span>
+    <div class="panel panel-primary post">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a href="{{ pathFor 'postPage'}}">{{title}}</a>
             </h3>
-            <div class="container-fluid">
-            	{{ swag }}
-            </div>
         </div>
+        <div class="panel-body">
+            {{ author}} {{ url }} {{ domain }}
+        </div>
+        <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a
+>
     </div>
 </template>
