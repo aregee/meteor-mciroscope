@@ -40,8 +40,11 @@ apse" data-target="#navigation">
                 <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a>
                 </li>
                 {{/if}}
+                <li class="dropdown">
+                    {{> notifications}}
+                </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="margin-right:20px;">
                 {{> loginButtons }}
             </ul>
         </div>

@@ -13,15 +13,36 @@
 </template> -->
 <template name="postItem">
     <div class="post">
+        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
         <div class="post-content">
-            <h3><a href="{{url}}">{{title}}</a>
+            <h3><a>{{title}}</a>
+                <span>
+                    {{pluralize votes "Vote"}}, submitted by {{author}} {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+                </span>
+            </h3>
+            <h3>
                 <span>{{domain}}</span>
             </h3>
-            <p>
-                submitted by {{author}} {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-            </p>
+            <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         </div>
         <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a
 >
   </div>
+</template>
+<template name="postItemDetail">
+    <div class="post">
+        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+
+        <div class="post-content">
+            <h3><a>{{title}}</a>
+                <!-- <span>{{domain}}</span> -->
+                <span>
+                    {{pluralize votes "Vote"}}, submitted by {{author}} {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+                </span>
+
+            </h3>
+            <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+            <p>{{ content }}</p>
+        </div>
+    </div>
 </template>

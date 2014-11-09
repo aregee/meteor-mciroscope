@@ -1,5 +1,8 @@
-<template name="postPage">{{#with currentPost}} {{> postItem}}
-    <ul class="comments">{{#each comments}} {{> comment}} {{/each}}
+<template name="postPage">
+    <!-- 	{{> postItem}} -->
+    {{#with currentPost}} {{> postItemDetail}}
+    <ul class="comments">
+        {{#each comments}} {{> comment}} {{/each}}
     </ul>
-    {{/with}}
+    {{#if currentUser}} {{> commentSubmit}} {{/if}} {{/with}}
 </template>
