@@ -4,12 +4,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 mizzao:bootstrap-3
 underscore
 iron:router
 accounts-facebook
-analytics:analytics
-tail:core
 sacha:spin
-
+ian:accounts-ui-bootstrap-3
+accounts-password
