@@ -1,19 +1,6 @@
-<!-- <template name="postItem">
-    <div class="list-group posts">
-        <div class="list-group-item">
-            <h4 class="list-group-item-heading">{{title}}</h4>
-            <p class="list-group-item-text">{{title}}
-                <span><a href="{{url}}">{{url}}</a>
-                </span>
-            </p>
-            <a href="{{pathFor 'postPage'}}" class="discuss btn btn-primary">Discuss</a
->
-        </div>
-    </div>
-</template> -->
 <template name="postItem">
     <div class="post">
-        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+        <a href="#" class="upvote btn btn-primary {{upvotedClass}}">⬆</a>
         <div class="post-content">
             <h3><a>{{title}}</a>
                 <span>
@@ -31,11 +18,10 @@
 </template>
 <template name="postItemDetail">
     <div class="post">
-        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+        <a href="#" class="upvote btn btn-primary {{upvotedClass}}">⬆</a>
 
         <div class="post-content">
             <h3><a>{{title}}</a>
-                <!-- <span>{{domain}}</span> -->
                 <span>
                     {{pluralize votes "Vote"}}, submitted by {{author}} {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
                 </span>
