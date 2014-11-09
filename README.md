@@ -1,4 +1,4 @@
 
 ## Learning MeteorJS 
 
-Demo deployment <findablenow.meteor.com>
+[Demo deployment](http://findablenow.meteor.com)
